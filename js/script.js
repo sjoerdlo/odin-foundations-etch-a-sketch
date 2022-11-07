@@ -39,7 +39,7 @@ function createGrid(squaresPerSide) {
         div.style.backgroundColor = 'white';
         gridContainer.appendChild(div);
 
-        gridContainer.style.backgroundImage = 'url("../img/' + getRandomIntInclusive(0, 3) + '.png")';
+        gridContainer.style.backgroundImage = 'url("img/' + getRandomIntInclusive(0, 3) + '.png")';
 
     }
     setupDrawOnGrid();
