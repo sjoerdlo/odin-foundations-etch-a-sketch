@@ -10,7 +10,7 @@ function getRandomIntInclusive(min, max) {
 function setupDrawOnGrid() {
     document.querySelector('.gridContainer').addEventListener('mouseover', (e) => {
         if (! e.target.classList.contains('gridContainer')) {
-            e.target.style.backgroundColor = 'transparent';
+            e.target.classList.add('fadeOut');
         }
     });
 }
@@ -36,7 +36,6 @@ function createGrid(squaresPerSide) {
     for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
         let div = document.createElement('div');
         div.style.width = squareWidth + 'px';
-        div.style.backgroundColor = 'white';
         gridContainer.appendChild(div);
 
         gridContainer.style.backgroundImage = 'url("img/' + getRandomIntInclusive(0, 3) + '.png")';
